@@ -1,0 +1,29 @@
+data:
+  name: ufet
+  data_files:
+    train: data/ufet/ufet_train.json
+    val: data/ufet/ufet_dev.json
+    test: data/ufet/ufet_test.json
+  label_path: data/ontology/ufet_types.txt
+  train_batch_size: 64
+  eval_batch_size: 10400
+  max_length: 128
+  neg_batch_factor: 1
+  use_enclosing_token_pos: False
+
+model:
+  model_name: roberta-large
+  sim_loss_margin: 0.1
+  num_classes: 1
+  threshold_step: 0.01
+  optimizer_params:
+    encoder:
+      lr: 0.000005
+      weight_decay: 0.01
+  scheduler_params:
+    scheduler_type: linear_warmup
+    warmup: 0.1
+
+trainer:
+  max_epochs: 1000
+  val_check_interval: 20

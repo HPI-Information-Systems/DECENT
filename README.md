@@ -23,9 +23,6 @@ To override certain environment variables, copy `.env_template` to `.env` and ad
 
 We use the data and the respective format provided by [Onoe et al.](https://github.com/yasumasaonoe/Box4Types)
 
-It can be downloaded [here](https://drive.google.com/file/d/1T9kbqNS2UN84Z40y3j6zjFooNu-IuaSN/view?usp=sharing).
-
-
 ### Distantly Supervised Data
 From [Choi et al.](https://aclanthology.org/P18-1009.pdf):
 https://www.cs.utexas.edu/~eunsol/html_pages/open_entity.html but only needed when pretraining.
